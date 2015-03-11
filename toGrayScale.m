@@ -10,6 +10,7 @@ function [ grayScale ] = toGrayScale ( image )
 
 grayScale = rgb2gray(image);
 grayScale = single(grayScale);
+grayScale = uint8(grayScale);
 
 end
 
