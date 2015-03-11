@@ -35,6 +35,7 @@ for row = 1:rowSize
 end
 
 cylindricalImg = uint8(cylindricalImg);
+imwrite(cylindricalImg, '/Users/cs/Documents/MATLAB/vision_panaroma/cylindrical.jpg');
 
 end
 
