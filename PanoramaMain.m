@@ -1,14 +1,13 @@
 function [ output_args ] = PanoramaMain ( input_args )
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
-% 
-img = imread('/Users/cs/Documents/MATLAB/vision-hdr-data/Pictures/Ceiling 2/IMG_4504.JPG') ;
-image(img);
 
-imshow(img);
 
-grayImg1 = toGrayScale(img);
-imshow(grayImg1);
+image1 = imread('/Users/cs/Documents/MATLAB/vision-hdr-data/Pictures/Ceiling 2/IMG_4504.JPG') ;
+image2 = imread('/Users/cs/Documents/MATLAB/vision-hdr-data/Pictures/Ceiling 2/IMG_4505.JPG') ;
+%image(img);
+
+extractSIFTFeaturs ( image1, image2 );
 
 % 
 % I = vl_impattern('roofs1') ;
