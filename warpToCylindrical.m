@@ -7,7 +7,7 @@ function [ cylindricalImg ] = warpToCylindrical( image, f )
 %       image - given input image pixels
 %       f - focal length estimate
 %   Return value:
-%       cylindricalImg - inverse map to cylindrical coordinates
+%       newImg - inverse map to cylindrical coordinates
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 rowSize = size(image, 1);
@@ -17,7 +17,7 @@ colSize = size(image, 2);
 xc = colSize / 2;
 yc = rowSize / 2;
 
-cylindricalImg = zeros(rowSize, colSize, 3);
+newImg = zeros(rowSize, colSize, 3);
 
 for row = 1:rowSize
     for col = 1:colSize
@@ -29,13 +29,17 @@ for row = 1:rowSize
         xcap = round(f * theta + xc);
         ycap = round(f * h + yc);
         
-        cylindricalImg(ycap, xcap, :) = image(row, col, :);
+        newImg(ycap, xcap, :) = image(row, col, :);
         
     end
 end
 
-cylindricalImg = uint8(cylindricalImg);
-%imwrite(cylindricalImg, '/Users/cs/Documents/MATLAB/vision_panaroma/cylindrical.jpg');
+newImg = uint8(newImg);
+%Cropping unwanted black pixels
+cylindricalImg = cropImage(newImg);
+
+%imwrite(newImg, '/Users/cs/Documents/MATLAB/vision_panaroma/myCylindrical.jpg');
+%imwrite(cylindricalImg, '/Users/cs/Documents/MATLAB/vision_panaroma/myCylCrop.jpg');
 
 end
 
