@@ -8,9 +8,9 @@ function [ grayScale ] = toGrayScale ( image )
 %       grayScale - the pixel values of the given image in gray scale
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%The vl_sift command requires a single precision gray scale image.
 grayScale = rgb2gray(image);
 grayScale = single(grayScale);
-grayScale = uint8(grayScale);
 
 end
 
