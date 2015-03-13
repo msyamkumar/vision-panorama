@@ -97,7 +97,7 @@ function [ croppedImg ] = cropImage ( image )
     end
 
     croppedImg = imcrop(image, [leftMargin topMargin newColSize newRowSize]);
-    %imwrite(croppedImg, '/Users/cs/Documents/MATLAB/vision_panaroma/myCylCrop.jpg');
+    %imwrite(croppedImg, '/Users/cs/Documents/MATLAB/vision-panorama/myCylCrop.jpg');
 
 end
 

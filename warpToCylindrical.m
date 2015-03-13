@@ -38,8 +38,8 @@ newImg = uint8(newImg);
 %Cropping unwanted black pixels
 cylindricalImg = cropImage(newImg);
 
-%imwrite(newImg, '/Users/cs/Documents/MATLAB/vision_panaroma/myCylindrical.jpg');
-%imwrite(cylindricalImg, '/Users/cs/Documents/MATLAB/vision_panaroma/myCylCrop.jpg');
+%imwrite(newImg, '/Users/cs/Documents/MATLAB/vision-panorama/myCylindrical.jpg');
+%imwrite(cylindricalImg, '/Users/cs/Documents/MATLAB/vision-panorama/myCylCrop.jpg');
 
 end
 

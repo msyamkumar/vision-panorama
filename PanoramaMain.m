@@ -1,4 +1,4 @@
-function [ output_args ] = PanaromaMain ( input_args )
+function [ output_args ] = PanoramaMain ( input_args )
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
 % 

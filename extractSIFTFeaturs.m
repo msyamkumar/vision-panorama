@@ -18,8 +18,8 @@ set(h2,'color','y','linewidth',2) ;
 % h3 = vl_plotsiftdescriptor(d(:,sel),f(:,sel)) ;
 % set(h3,'color','g') ;
 
-imwrite(grayImg1, '/Users/cs/Documents/MATLAB/vision_panaroma/gray1.jpg');
-%imwrite(grayImg2, '/Users/cs/Documents/MATLAB/vision_panaroma/gray2.jpg');
+imwrite(grayImg1, '/Users/cs/Documents/MATLAB/vision-panorama/gray1.jpg');
+%imwrite(grayImg2, '/Users/cs/Documents/MATLAB/vision-panorama/gray2.jpg');
 
 
 end
