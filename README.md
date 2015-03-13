@@ -1,2 +1,2 @@
-# vision_panaroma
-Objective: To generate panaroma by mosaic stitching of different images
+# vision-panorama
+Objective: To generate panorama by mosaic stitching of different images
