@@ -96,8 +96,7 @@ for i=1:num_images-1
 end
 
 % cropping
-% cropped = cropImage2(mosaic);
-cropped = mosaic;
+cropped = cropImage2(mosaic);
 
 imshow(cropped);
 imwrite(cropped, 'panorama.jpg');
