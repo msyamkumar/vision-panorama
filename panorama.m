@@ -1,10 +1,13 @@
 % master script for running panorama implementation
+clear all;
+close all;
+clc;
 
 %% load image metadata
 disp('Loading image list...');
 % dir = strcat('/Users/akshaysood/Box Sync/CS766/Panorama/data/1/');
-% dir = strcat('/Users/akshaysood/Box Sync/CS766/Panorama/Pictures/Latest Pics/HDR/50/');
-dir = strcat('/Users/akshaysood/Box Sync/CS766/Panorama/Pictures/Latest Pics/Bridge/');
+dir = strcat('/Users/akshaysood/Box Sync/CS766/Panorama/Pictures/Latest Pics/HDR/20/');
+% dir = strcat('/Users/akshaysood/Box Sync/CS766/Panorama/Pictures/Latest Pics/Bridge/');
 % dir = strcat('/Users/cs/Desktop/CS766/HW2/Pictures/Bridge2/');
 
 imlistfile = strcat(dir, 'image_list.txt');
@@ -87,19 +90,17 @@ for i=1:num_images-1
     img1 = mosaic;
     img2 = cylindrical_images{i+1};
 
-    % only use translation along x-axis
-    h = eye(3);
-    h(1,3) = H{i}(1,3);
-
-    [img1t, img2t, split] = stitchTransform(img1, img2, h);
+    [img1t, img2t, split] = stitchTransform(img1, img2, H{i}(1,3));
     mosaic = blendFeathering(img1t, img2t, split);
     
 end
 
 % cropping
-cropped = cropImage2(mosaic);
+% cropped = cropImage2(mosaic);
+cropped = mosaic;
 
 imshow(cropped);
 imwrite(cropped, 'panorama.jpg');
+imwrite(cropped, strcat(dir, 'panorama.jpg'));
 
 disp('Done.');

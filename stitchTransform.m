@@ -1,11 +1,10 @@
-function [ img1t, img2t, split ] = stitchTransform( img1, img2, h )
+function [ img1t, img2t, split ] = stitchTransform( img1, img2, translation )
 % intermediate stitching step
 % returns transformed but unblended images and a suitable stitching point
 
 % only use translation along x-axis
-hbar = eye(3);
-hbar(1,3) = h(1,3);
-h = hbar;
+h = eye(3);
+h(1,3) = translation;
     
 % transpose to match MATLAB convention
 % xdataimg2t and ydataimg2t : bounds of the transformed img2
