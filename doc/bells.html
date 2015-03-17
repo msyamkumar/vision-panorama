@@ -60,6 +60,24 @@
                         <li>HDR of panorama</li>
                     </ul>
 
+                    <h3>Pyramid Blending</h3>
+
+                    We implemented pyramid blending algorithm and applied to mosaicing to generate panorama image, which is shown in <a href="pano.html">Our Panorama</a>. Following are some interesting blending results from our implementation:<br><br>
+
+                    <img src="images/1_left.JPG" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">                                                                                                                                                             
+                    <img src="images/1_right.jpg" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+                    <img src="images/1_blended.jpg" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+                                                                                <p style="clear: both;">
+                    
+                    <br><br>
+                    <img src="images/apple1.JPG" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">                                                                                                                                                             
+                    <img src="images/orange1.jpg" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+                    <img src="images/blended.jpg" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;">
+                                                                                <p style="clear: both;">
+                    
+                    <h3>Handling exposure differences</h3>
+                    We implemented simple exposure correction using intensity normalization. We also partially implemented Gamma correction. The panorama generated with exposure correctness is shown in <a href="pano.html">Our Panorama</a>.
+
                     <h3>Application of Scheimpflug Principle for angular focal length estimation</h3>
 
                     We applied Scheimpflug Principle to estimate the change in focal length when changing the angle of the camera. We acquired images of the Capitol roof at an angle approximately equivalent to 45 degrees and calculated variation in focal length using the formula from the paper: <br><br>
@@ -73,13 +91,13 @@
                     <h3>High Definition Panorama</h3>
 
                     We took images at 7 different exposures of the CS corridor and generated the corresponding panorama. Few of the samples are shown below:<br><br>
-                    <img src="images/angularPanorama.jpg"  width=985><br><br>
-                    <img src="images/angularPanorama.jpg"  width=985><br><br>
-                    <img src="images/angularPanorama.jpg"  width=985><br><br>
-                    <img src="images/angularPanorama.jpg"  width=985><br><br>
+                    <img src="images/exposure5.jpg"  width=985><br><br>
+                    <img src="images/exposure20.jpg"  width=985><br><br>
+                    <img src="images/exposure100.jpg"  width=985><br><br>
+                    <img src="images/exposure250.jpg"  width=985><br><br>
                     
-                    We ran our HDR code from assignment 1 to obtain the following HDR panorama:<br></br>
-                    <img src="images/angularPanorama.jpg"  width=985><br><br>
+                    We ran our HDR code from assignment 1 and tonemapped using Photomatix to obtain the following HDR panorama:<br></br>
+                    <img src="images/panorama_tonemapped.jpg"  width=985><br><br>
                 </font>
             </td>
         </tr>
