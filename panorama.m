@@ -6,8 +6,8 @@ clc;
 %% load image metadata
 disp('Loading image list...');
 % dir = strcat('/Users/akshaysood/Box Sync/CS766/Panorama/data/1/');
-dir = strcat('/Users/akshaysood/Box Sync/CS766/Panorama/Pictures/Latest Pics/HDR/20/');
-% dir = strcat('/Users/akshaysood/Box Sync/CS766/Panorama/Pictures/Latest Pics/Bridge/');
+% dir = strcat('/Users/akshaysood/Box Sync/CS766/Panorama/Pictures/Latest Pics/HDR/20/');
+dir = strcat('/Users/akshaysood/Box Sync/CS766/Panorama/Pictures/Latest Pics/Capitol/');
 % dir = strcat('/Users/cs/Desktop/CS766/HW2/Pictures/Bridge2/');
 
 imlistfile = strcat(dir, 'image_list.txt');
