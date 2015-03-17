@@ -1,0 +1,90 @@
+<html>
+<body bgcolor="#FFF8DC" link="blue">
+    <style>
+        h1{
+             text-decoration: underline;
+        }
+    </style>
+    <center>
+    <table width=1000 >
+        <tr align=center>
+            <td colspan=2>
+                <font color="#000000">
+                    <div id='page' style='width: 600px'>
+                        <h1 style='font-size:32px;'>Assignment 2: Panoramic Mosaic Stitching</h1>
+                    </div>
+                    Akshay Sood(<a href="mailto:sood@cs.wisc.ed">sood@cs.wisc.edu</a>), Meenakshi Syamkumar (<a href="mailto:ms@cs.wisc.ed">ms@cs.wisc.edu</a>)
+                </font>
+            </td>
+        </tr>
+        <tr>
+            <td colspan=2>
+                </br>
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td width='315' alight=left valign=top>
+                <font color="#000000">
+                    <div id = 'page'>
+                        <h2 style ='font-size:20px;'>
+                            <font color="#000000">  
+                                Table of contents
+                            </font>
+                        </h2>
+                    </div>
+                    <ul>
+                                            <li><a href="goal.html">Goal<a></li>
+                                                                    <li><a href="imageAcq.html">Image acquisition</a></li>
+                                                                                            <li><a href="algorithms.html">Panorama implementation</a></li>
+                                                                                                                    <li><a href="bells.html">Bells and Whistles</a></li>
+                                                                                                                                            <li><a href="pano.html">Our Panorama</a></li>
+                                                                                                                                                                    <li><a href="panoInteractive.html">Interactive Panorama</a></li>
+                                                                                                                                                                                            <li><a href="git.html">Git logs and credits</a></li>
+                                                                                                                                                                                                                    <li><a href="reference.html">References</a></li>
+                    </ul>
+                </font>
+            </td>
+            <td>
+                <font color="#000000">
+                    <div id = 'page'>
+                    <h2 style ='font-size:24px;'><center>Bells and Whistles</center></h2>
+                    </div>
+
+                    We implemented the following Bells and Whistles:
+
+                    <ul>
+                        <li>Pyramid blending</li>
+                        <li>Handling exposure differences</li>
+                        <li>Angular focal length estimation for tilted images using Scheimpflug Principle</li>
+                        <li>HDR of panorama</li>
+                    </ul>
+
+                    <h3>Application of Scheimpflug Principle for angular focal length estimation</h3>
+
+                    We applied Scheimpflug Principle to estimate the change in focal length when changing the angle of the camera. We acquired images of the Capitol roof at an angle approximately equivalent to 45 degrees and calculated variation in focal length using the formula from the paper: <br><br>
+                                    
+                    <center><i> new_f = f / cos(theta)</i></center> <br>
+
+                    Following is feather blended panorama using the modified focal length:<br><br>
+
+                    <img src="images/angularPanorama.jpg"  width=985><br><br>
+
+                    <h3>High Definition Panorama</h3>
+
+                    We took images at 7 different exposures of the CS corridor and generated the corresponding panorama. Few of the samples are shown below:<br><br>
+                    <img src="images/angularPanorama.jpg"  width=985><br><br>
+                    <img src="images/angularPanorama.jpg"  width=985><br><br>
+                    <img src="images/angularPanorama.jpg"  width=985><br><br>
+                    <img src="images/angularPanorama.jpg"  width=985><br><br>
+                    
+                    We ran our HDR code from assignment 1 to obtain the following HDR panorama:<br></br>
+                    <img src="images/angularPanorama.jpg"  width=985><br><br>
+                </font>
+            </td>
+        </tr>
+    </table>
+    </center>
+<body>
+</html>
+
