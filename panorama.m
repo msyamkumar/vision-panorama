@@ -71,11 +71,11 @@ for i=1:num_images-1
     img2 = cylindrical_images{i+1};
     % homography estimation
     if isLeft
-        H{i} = homographyAlternative(img2, img1);
-        % H{i} = homographyEstimation(img2, img1);
+        % H{i} = homographyAlternative(img2, img1);
+        H{i} = homographyEstimation(img2, img1);
     else
-        H{i} = homographyAlternative(img1, img2);
-        % H{i} = homographyEstimation(img1, img2);
+        % H{i} = homographyAlternative(img1, img2);
+        H{i} = homographyEstimation(img1, img2);
     end 
 end
 disp('Done.');
