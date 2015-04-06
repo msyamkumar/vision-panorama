@@ -8,7 +8,7 @@ function H = homographyAlternative(im1, im2)
 %   images. Use SIFT_MOSAIC(IM1,IM2) to compute the mosaic of two
 %   custom images IM1 and IM2.
 
-% AUTORIGHTS
+% Derived from: http://www.vlfeat.org/applications/sift-mosaic-code.html
 
 if nargin == 0
   im1 = imread(fullfile(vl_root, 'data', 'river1.jpg')) ;

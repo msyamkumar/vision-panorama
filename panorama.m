@@ -5,10 +5,7 @@ clc;
 
 %% load image metadata
 disp('Loading image list...');
-% dir = strcat('/Users/akshaysood/Box Sync/CS766/Panorama/data/1/');
-% dir = strcat('/Users/akshaysood/Box Sync/CS766/Panorama/Pictures/Latest Pics/HDR/20/');
-dir = strcat('/Users/akshaysood/Box Sync/CS766/Panorama/Pictures/Latest Pics/Capitol/');
-% dir = strcat('/Users/cs/Desktop/CS766/HW2/Pictures/Bridge2/');
+dir = strcat('data/Capitol/');
 
 imlistfile = strcat(dir, 'image_list.txt');
 image_names = importdata(imlistfile);
@@ -61,7 +58,7 @@ disp('Done.');
 %% estimate homography between each adjacent pair
 disp('Estimating homographies...');
 
-%vlfeat_startup;
+vlfeat_startup;
 
 %Left orientation
 isLeft = 1;
@@ -98,8 +95,8 @@ end
 % cropping
 cropped = cropImage2(mosaic);
 
-imshow(cropped);
-imwrite(cropped, 'panorama.jpg');
-imwrite(cropped, strcat(dir, 'panorama.jpg'));
+imshow(mosaic);
+imwrite(mosaic, 'panorama.jpg');
+imwrite(mosaic, strcat(dir, 'panorama.jpg'));
 
 disp('Done.');

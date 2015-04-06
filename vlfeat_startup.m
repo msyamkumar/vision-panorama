@@ -1,4 +1,4 @@
-function [  ] = vlfeat_startup( )
+function [  ] = startup( )
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %startup: Init for vlfeat
