@@ -58,6 +58,7 @@ disp('Done.');
 %% estimate homography between each adjacent pair
 disp('Estimating homographies...');
 
+warning('off','all');
 vlfeat_startup;
 
 %Left orientation
